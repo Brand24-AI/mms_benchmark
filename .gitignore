@@ -4,3 +4,6 @@ _proc
 
 docker-compose.local.yml
 _docs
+
+.vscode
+__pycache__
