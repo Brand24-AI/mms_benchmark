@@ -729,3 +729,19 @@ afro_asiatic
             num_rows: 8619
         })
     })
+
+## Dataset Curators
+
+The corpus was put together by
+
+- [@laugustyniak](https://www.linkedin.com/in/lukaszaugustyniak/)
+- [@swozniak](https://www.linkedin.com/in/wscode/)
+- [@mgruza](https://www.linkedin.com/in/marcin-gruza-276b2512b/)
+- [@pgramacki](https://www.linkedin.com/in/piotrgramacki/)
+- [@krajda](https://www.linkedin.com/in/krzysztof-rajda/)
+- [@mmorzy](https://www.linkedin.com/in/mikolajmorzy/)
+- [@tkajdanowicz](https://www.linkedin.com/in/kajdanowicz/)
+
+## Citation
+
+TBA
