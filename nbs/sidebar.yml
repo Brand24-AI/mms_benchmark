@@ -1,0 +1,6 @@
+website:
+  sidebar:
+    contents:
+      - index.ipynb
+      - 00_dataset_card.ipynb
+      - 01_benchmark_results.ipynb
