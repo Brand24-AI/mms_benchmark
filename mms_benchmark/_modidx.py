@@ -5,4 +5,4 @@ d = { 'settings': { 'branch': 'main',
                 'doc_host': 'https://Brand24-AI.github.io',
                 'git_url': 'https://github.com/Brand24-AI/mms_benchmark',
                 'lib_path': 'mms_benchmark'},
-  'syms': {'mms_benchmark.core': {'mms_benchmark.core.foo': ('core.html#foo', 'mms_benchmark/core.py')}}}
+  'syms': {}}
