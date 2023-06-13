@@ -5,4 +5,4 @@ d = { 'settings': { 'branch': 'main',
                 'doc_host': 'https://Brand24-AI.github.io/mms_benchmark',
                 'git_url': 'https://github.com/Brand24-AI/mms_benchmark',
                 'lib_path': 'mms_benchmark'},
-  'syms': {}}
+  'syms': {'mms_benchmark.citations': {}}}
