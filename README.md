@@ -22,18 +22,15 @@ training objectives, dataset collections, and fine-tuning strategies.
 
 ## Dataset
 
-https://huggingface.co/datasets/Brand24/mms
+[Massively Multilingual Sentiment
+Datasets](https://huggingface.co/datasets/Brand24/mms)
 
 ## Analysis and benchmarking
 
-https://huggingface.co/spaces/Brand24/mms_benchmark
+[HuggingFace Spaces with Analysis and
+Benchmark](https://huggingface.co/spaces/Brand24/mms_benchmark)
 
 ## General statistics about the dataset
-
-``` python
-import pandas as pd
-import datasets
-```
 
 > It may take some time to download the dataset and generate train set
 > inside HuggingFace dataset. Please be patient.
@@ -46,7 +43,19 @@ mms_dataset = datasets.load_dataset("Brand24/mms")
 mms_dataset_df = mms_dataset["train"].to_pandas()
 ```
 
+How many examples do we have?
+
+``` python
+mms_dataset.num_rows
+```
+
+    {'train': 6164762}
+
 ## Features
+
+We provide not only texts and sentiment labels but we assigned many
+additional dimensions for datasets and languages, hence it is possible
+to splice and dice them as you want and need.
 
 ``` python
 mms_dataset["train"].features
@@ -72,6 +81,83 @@ mms_dataset["train"].features
      'Grammatical genders': Value(dtype='string', id=None),
      'cleanlab_self_confidence': Value(dtype='float32', id=None)}
 
+### Linguistic Typology
+
+The field of language typology focuses on studying the similarities and
+differences among languages. These differences can be categorized into
+phonological (sounds), syntactic (structures), lexical (vocabulary), and
+theoretical aspects. Linguistic typology analyzes the current state of
+languages, contrasting with genealogical linguistics, which examines
+historical relationships between languages.
+
+Genealogical linguistics studies language families and genera. A
+language family consists of languages that share a common ancestral
+language, while genera are branches within a language family. The
+Indo-European family, for example, includes genera such as Slavic,
+Romance, Germanic, and Indic. Over 7000 languages are categorized into
+approximately 150 language families, with Indo-European, Sino-Tibetan,
+Turkic, Afro-Asiatic, Nilo-Saharan, Niger-Congo, and Eskimo-Aleut being
+some of the largest families.
+
+Within linguistic typology, languages are described using various
+linguistic features. Our work focuses on sentiment classification and
+selects ten relevant features:
+
+- `text`: The feature text represents the actual text of the sentiment
+  dataset. It is of type string and contains the text samples or
+  sentences for sentiment analysis.
+- `label`: The feature label corresponds to the sentiment labels of the
+  text samples. It is of type ClassLabel and has three possible values:
+  negative, neutral, and positive. These labels indicate the sentiment
+  or emotional polarity associated with the text.
+- `original_dataset`: The feature original_dataset refers to the name or
+  identifier of the original dataset from which the text samples were
+  extracted. It is of type string and provides information about the
+  source dataset.
+- `domain`: The feature domain represents the domain or topic of the
+  sentiment dataset. It is of type string and provides context regarding
+  the subject matter of the text samples.
+- `language`: The feature language indicates the language of the text
+  samples in the sentiment dataset. It is of type string and specifies
+  the language in which the text is written.
+- `Family`: The feature Family represents the language family to which a
+  specific language belongs. It is of type string and provides
+  information about the broader categorization of languages into
+  language families.
+- `Genus`: The feature Genus corresponds to the genus or branch within a
+  language family. It is of type string and indicates the specific
+  subgrouping of languages within a language family.
+- `Definite article`: Half of the languages do not use the definite
+  article, which signals uniqueness or definiteness of a concept.
+- `Indefinite article`: Half of the languages do not use the indefinite
+  article, with some languages using a separate article or the numeral
+  “one.”
+- `Number of cases`: Languages vary greatly in the number of
+  morphological cases used.
+- `Order of subject, verb, and object`: Different languages have
+  different word orderings, with variations like SOV, SVO, VSO, VOS,
+  OVS, and OSV.
+- `Negative morphemes`: Negative morphemes indicate clausal negation in
+  declarative sentences.
+- `Polar questions`: Questions with yes/no answers, which can be formed
+  using question particles, interrogative morphology, or intonation.
+- `Position of the negative morpheme`: The position of the negative
+  morpheme can vary in relation to subjects and objects.
+- `Prefixing vs. suffixing`: Languages differ in their use of prefixes
+  and suffixes in inflectional morphology.
+- `Coding of nominal plurals`: Plurals can be expressed through
+  morphological changes or the use of plurality indicator morphemes.
+- `Grammatical genders`: Languages vary in the number of grammatical
+  genders used, or may not use the concept at all.
+
+These language features are available as filtering options in our
+library. Users can download specific facets of the collection, such as
+datasets in Slavic languages with interrogative word order for polar
+questions or datasets from the Afro-Asiatic language family without
+morphological case-making.
+
+### Example
+
 ``` python
 mms_dataset["train"][2001000]
 ```
@@ -96,6 +182,8 @@ mms_dataset["train"][2001000]
      'Grammatical genders': 'no grammatical gender',
      'cleanlab_self_confidence': 0.9978116750717163}
 
+### Classes
+
 ``` python
 labels = mms_dataset["train"].features["label"].names
 labels
@@ -106,6 +194,8 @@ labels
 ``` python
 mms_dataset_df["label_name"] = mms_dataset_df["label"].apply(lambda x: labels[x])
 ```
+
+### Classes distribution
 
 ``` python
 labels_stats_df = pd.DataFrame(mms_dataset_df.label_name.value_counts())
@@ -596,6 +686,8 @@ pl["train"].to_pandas().sample(5)
 
 ## Use cases
 
+### Case 1
+
 Thus, when training a sentiment classifier using our dataset, one may
 download different facets of the collection. For instance, one can
 download all datasets in `Slavic` languages in which polar questions are
@@ -618,6 +710,8 @@ slavic
             num_rows: 252910
         })
     })
+
+### Case 2
 
 ``` python
 afro_asiatic = mms_dataset.filter(lambda row: row["Family"] == "Afro-Asiatic" and row["Number of cases"] == "no morphological case-making")

@@ -3,7 +3,7 @@ project:
 
 website:
   title: "mms_benchmark"
-  site-url: "https://Brand24-AI.github.io/mms_benchmark"
+  site-url: "https://Brand24-AI.github.io/mms_benchmark/mms_benchmark"
   description: "The most extensive open massively multilingual corpus of datasets for training sentiment models. The corpus consists of 79 manually selected from over 350 datasets reported in the scientific literature based on strict quality criteria and covers 27 languages."
   repo-branch: main
   repo-url: "https://github.com/Brand24-AI/mms_benchmark"
