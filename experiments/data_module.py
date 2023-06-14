@@ -13,8 +13,6 @@ from datasets import load_dataset
 from torch.utils.data import Dataset
 from transformers import AutoTokenizer
 
-HUGGINGFACE_TOKEN = "hf_XXX"
-
 
 class TextsDataModule(pl.LightningDataModule):
     def __init__(
@@ -50,7 +48,7 @@ class TextsDataModule(pl.LightningDataModule):
         self.tokenizer = tokenizer
 
     def prepare_data(self) -> None:
-        hf_dataset = load_dataset("Brand24/mms", use_auth_token=HUGGINGFACE_TOKEN)
+        hf_dataset = load_dataset("Brand24/mms")
 
         self.dataset = hf_dataset["train"].to_pandas()
 
