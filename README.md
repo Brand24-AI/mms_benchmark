@@ -669,7 +669,16 @@ The corpus was put together by
 
 ## Citation
 
-TBA
+``` bibtex
+@misc{augustyniak2023massively,
+      title={Massively Multilingual Corpus of Sentiment Datasets and Multi-faceted Sentiment Classification Benchmark}, 
+      author={Łukasz Augustyniak and Szymon Woźniak and Marcin Gruza and Piotr Gramacki and Krzysztof Rajda and Mikołaj Morzy and Tomasz Kajdanowicz},
+      year={2023},
+      eprint={2306.07902},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
 
 ## Licensing Information
 
