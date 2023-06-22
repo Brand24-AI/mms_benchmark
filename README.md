@@ -680,6 +680,11 @@ The corpus was put together by
 }
 ```
 
+## Acknowledgements
+
+- BRAND24 - https://brand24.com
+- CLARIN-PL-Biz - https://clarin.biz
+
 ## Licensing Information
 
 These data are released under this licensing scheme. We do not own any
