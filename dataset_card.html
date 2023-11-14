@@ -1,0 +1,3153 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Dataset Card for https://huggingface.co/datasets/Brand24/mms">
+
+<title>mms_benchmark - MMS Dataset Card</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="mms_benchmark - MMS Dataset Card">
+<meta property="og:description" content="Dataset Card for https://huggingface.co/datasets/Brand24/mms">
+<meta property="og:image" content="https://Brand24-AI.github.io/mms_benchmark/mms_benchmark/images/quality.png">
+<meta property="og:site-name" content="mms_benchmark">
+<meta property="og:image:height" content="428">
+<meta property="og:image:width" content="561">
+<meta name="twitter:title" content="mms_benchmark - MMS Dataset Card">
+<meta name="twitter:description" content="Dataset Card for https://huggingface.co/datasets/Brand24/mms">
+<meta name="twitter:image" content="https://Brand24-AI.github.io/mms_benchmark/mms_benchmark/images/quality.png">
+<meta name="twitter:image-height" content="428">
+<meta name="twitter:image-width" content="561">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">mms_benchmark</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools ms-auto">
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dataset_card.html">MMS Dataset Card</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">MMS Dataset Card</h1>
+                  <div>
+        <div class="description">
+          Dataset Card for https://huggingface.co/datasets/Brand24/mms
+        </div>
+      </div>
+                </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MMS Dataset and Benchmark</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dataset_card.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">MMS Dataset Card</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./benchmark_results.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Benchmark results</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./citations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MMS Dataset Citations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./training_example.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MMS - Example training pipeline</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#easiness-of-using" id="toc-easiness-of-using" class="nav-link active" data-scroll-target="#easiness-of-using">Easiness of using</a>
+  <ul class="collapse">
+  <li><a href="#data-ready-to-slice-and-dice-and-train-a-model" id="toc-data-ready-to-slice-and-dice-and-train-a-model" class="nav-link" data-scroll-target="#data-ready-to-slice-and-dice-and-train-a-model">Data ready to slice and dice and train a model</a></li>
+  <li><a href="#linguistic-typology" id="toc-linguistic-typology" class="nav-link" data-scroll-target="#linguistic-typology">Linguistic Typology</a></li>
+  </ul></li>
+  <li><a href="#datasheets-for-datasets" id="toc-datasheets-for-datasets" class="nav-link" data-scroll-target="#datasheets-for-datasets">Datasheets for Datasets</a></li>
+  <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations">Limitations</a>
+  <ul class="collapse">
+  <li><a href="#filter-examples-by-annotation-qualitym" id="toc-filter-examples-by-annotation-qualitym" class="nav-link" data-scroll-target="#filter-examples-by-annotation-qualitym">Filter examples by annotation qualitym</a></li>
+  </ul></li>
+  <li><a href="#datasets" id="toc-datasets" class="nav-link" data-scroll-target="#datasets">Datasets</a>
+  <ul class="collapse">
+  <li><a href="#show-all-datasets-with-citations-in-a-table" id="toc-show-all-datasets-with-citations-in-a-table" class="nav-link" data-scroll-target="#show-all-datasets-with-citations-in-a-table">Show all datasets with citations in a table</a></li>
+  </ul></li>
+  <li><a href="#dataset-stats" id="toc-dataset-stats" class="nav-link" data-scroll-target="#dataset-stats">Dataset Stats</a>
+  <ul class="collapse">
+  <li><a href="#datasets-per-language" id="toc-datasets-per-language" class="nav-link" data-scroll-target="#datasets-per-language">Datasets per language</a></li>
+  <li><a href="#labels-per-language" id="toc-labels-per-language" class="nav-link" data-scroll-target="#labels-per-language">Labels per language</a></li>
+  <li><a href="#texts-in-language-family-and-genus" id="toc-texts-in-language-family-and-genus" class="nav-link" data-scroll-target="#texts-in-language-family-and-genus">Texts in Language Family and Genus</a></li>
+  <li><a href="#examples-per-domain" id="toc-examples-per-domain" class="nav-link" data-scroll-target="#examples-per-domain">Examples per domain</a></li>
+  </ul></li>
+  <li><a href="#hosting-licensing-and-maintenance-plan" id="toc-hosting-licensing-and-maintenance-plan" class="nav-link" data-scroll-target="#hosting-licensing-and-maintenance-plan">Hosting, Licensing, and Maintenance Plan</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/Brand24-AI/mms_benchmark/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
+<section id="easiness-of-using" class="level2">
+<h2 class="anchored" data-anchor-id="easiness-of-using">Easiness of using</h2>
+<p>One of the key ideas behind creating our library of datasets was to prioritize ease of use for researchers. Recognizing the importance of accessibility and convenience, we chose the HuggingFace platform as the storage and distribution platform for the datasets. HuggingFace provides a user-friendly interface and a wide range of tools and resources, making it easy for researchers to access and utilize the datasets.</p>
+<p>To further enhance usability, we took the initiative to gather all the necessary citations for the datasets included in our library. By unifying the citations, we aimed to simplify and expedite the process of generating citations for researchers who utilize our datasets. This step reduces the time and effort required for researchers to acknowledge the datasets’ sources properly.</p>
+<p>However, it is essential to note that while we have taken steps to streamline the citation process, researchers should still independently verify the licenses of the datasets, especially if they intend to use them for purposes beyond strict academic research. Ensuring compliance with licensing requirements is crucial to maintaining ethical and legal data use standards.</p>
+<p>Overall, our overarching goal in creating this unified corpus of datasets is accelerating academic sentiment analysis research. By providing a comprehensive collection of high-quality datasets and facilitating their accessibility, we aim to support researchers in exploring and advancing sentiment analysis techniques and methodologies.</p>
+<section id="data-ready-to-slice-and-dice-and-train-a-model" class="level3">
+<h3 class="anchored" data-anchor-id="data-ready-to-slice-and-dice-and-train-a-model">Data ready to slice and dice and train a model</h3>
+<p>Our dataset is designed to be versatile and allows researchers to slice and dice the data for training and modeling according to their specific needs. Drawing from the field of linguistic typology, which examines the characteristics of languages, we have incorporated various linguistic features into our dataset selection process. These features include the text itself, sentiment labels, the original dataset source, domain, language, language family, genus, the presence or absence of definite and indefinite articles, the number of cases, word order, negative morphemes, polar questions, the position of negative morphemes, prefixing vs.&nbsp;suffixing, coding of nominal plurals, and grammatical genders. Researchers can easily access datasets that match their desired linguistic typology criteria by offering these features as filtering options in our library.</p>
+<p>For instance, researchers can download datasets specific to Slavic languages with interrogative word order for polar questions or datasets from the Afro-Asiatic language family without morphological case-making. This flexibility empowers researchers to tailor their analyses and models to their linguistic interests and research questions.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> datasets</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>mms_dataset <span class="op">=</span> datasets.load_dataset(<span class="st">"Brand24/mms"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>mms_dataset_df <span class="op">=</span> mms_dataset[<span class="st">"train"</span>].to_pandas()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>All features in dataset</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>mms_dataset_df.sample(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">_id</th>
+<th data-quarto-table-cell-role="th">text</th>
+<th data-quarto-table-cell-role="th">label</th>
+<th data-quarto-table-cell-role="th">original_dataset</th>
+<th data-quarto-table-cell-role="th">domain</th>
+<th data-quarto-table-cell-role="th">language</th>
+<th data-quarto-table-cell-role="th">Family</th>
+<th data-quarto-table-cell-role="th">Genus</th>
+<th data-quarto-table-cell-role="th">Definite articles</th>
+<th data-quarto-table-cell-role="th">Indefinite articles</th>
+<th data-quarto-table-cell-role="th">Number of cases</th>
+<th data-quarto-table-cell-role="th">Order of subject, object, verb</th>
+<th data-quarto-table-cell-role="th">Negative morphemes</th>
+<th data-quarto-table-cell-role="th">Polar questions</th>
+<th data-quarto-table-cell-role="th">Position of negative word wrt SOV</th>
+<th data-quarto-table-cell-role="th">Prefixing vs suffixing</th>
+<th data-quarto-table-cell-role="th">Coding of nominal plurality</th>
+<th data-quarto-table-cell-role="th">Grammatical genders</th>
+<th data-quarto-table-cell-role="th">cleanlab_self_confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">1117023</td>
+<td>1117023</td>
+<td>hlucnost mi prijde uplne v pohode, pere dobre,...</td>
+<td>2</td>
+<td>cs_mall_product_reviews</td>
+<td>reviews</td>
+<td>cs</td>
+<td>Indo-European</td>
+<td>Slavic</td>
+<td>no article</td>
+<td>no article</td>
+<td>6-7</td>
+<td>SVO</td>
+<td>negative affix</td>
+<td>interrogative word order</td>
+<td>MorphNeg</td>
+<td>weakly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine, neuter</td>
+<td>0.679376</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">824580</td>
+<td>824580</td>
+<td>“فندق جميل ولكن الخدمة جدا سيئه”. . الخدمة غير...</td>
+<td>0</td>
+<td>ar_hard</td>
+<td>reviews</td>
+<td>ar</td>
+<td>Afro-Asiatic</td>
+<td>Semitic</td>
+<td>definite affix</td>
+<td>no article</td>
+<td>3</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative intonation only</td>
+<td>SNegVO</td>
+<td>weakly suffixing</td>
+<td>mixed morphological plural</td>
+<td>masculine, feminine</td>
+<td>0.725264</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6014593</td>
+<td>6014593</td>
+<td>刚开始不习惯…之后还挺好用的…很轻便 很细…调节长度也很方便</td>
+<td>2</td>
+<td>zh_multilan_amazon</td>
+<td>reviews</td>
+<td>zh</td>
+<td>Sino-Tibetan</td>
+<td>Chinese</td>
+<td>no article</td>
+<td>indefinite word same as one</td>
+<td>no morphological case-making</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>SNegVO</td>
+<td>little affixation</td>
+<td>no plural</td>
+<td>noun classifiers</td>
+<td>0.907645</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5313872</td>
+<td>5313872</td>
+<td>Чемпионы. И этим все сказано.</td>
+<td>2</td>
+<td>ru_sentiment</td>
+<td>social_media</td>
+<td>ru</td>
+<td>Indo-European</td>
+<td>Slavic</td>
+<td>no article</td>
+<td>no article</td>
+<td>6-7</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine, neuter</td>
+<td>0.109386</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4290632</td>
+<td>4290632</td>
+<td>“@UnCharroDice: Y no ha de sobrar, quien con c...</td>
+<td>1</td>
+<td>es_twitter_sentiment</td>
+<td>social_media</td>
+<td>es</td>
+<td>Indo-European</td>
+<td>Romance</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word same as one</td>
+<td>no morphological case-making</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine</td>
+<td>0.164549</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="linguistic-typology" class="level3">
+<h3 class="anchored" data-anchor-id="linguistic-typology">Linguistic Typology</h3>
+<p>The field of language typology focuses on studying the similarities and differences among languages. These differences can be categorized into phonological (sounds), syntactic (structures), lexical (vocabulary), and theoretical aspects. Linguistic typology analyzes the current state of languages, contrasting with genealogical linguistics, which examines historical relationships between languages.</p>
+<p>Genealogical linguistics studies language families and genera. A language family consists of languages that share a common ancestral language, while genera are branches within a language family. The Indo-European family, for example, includes genera such as Slavic, Romance, Germanic, and Indic. Over 7000 languages are categorized into approximately 150 language families, with Indo-European, Sino-Tibetan, Turkic, Afro-Asiatic, Nilo-Saharan, Niger-Congo, and Eskimo-Aleut being some of the largest families.</p>
+<p>Within linguistic typology, languages are described using various linguistic features. Our work focuses on sentiment classification and selects ten relevant features:</p>
+<ul>
+<li><code>text</code>: The feature text represents the actual text of the sentiment dataset. It is of type string and contains the text samples or sentences for sentiment analysis.</li>
+<li><code>label</code>: The feature label corresponds to the sentiment labels of the text samples. It is of type ClassLabel and has three possible values: negative, neutral, and positive. These labels indicate the sentiment or emotional polarity associated with the text.</li>
+<li><code>original_dataset</code>: The feature original_dataset refers to the name or identifier of the original dataset from which the text samples were extracted. It is of type string and provides information about the source dataset.</li>
+<li><code>domain</code>: The feature domain represents the domain or topic of the sentiment dataset. It is of type string and provides context regarding the subject matter of the text samples.</li>
+<li><code>language</code>: The feature language indicates the language of the text samples in the sentiment dataset. It is of type string and specifies the language in which the text is written.</li>
+<li><code>Family</code>: The feature Family represents the language family to which a specific language belongs. It is of type string and provides information about the broader categorization of languages into language families.</li>
+<li><code>Genus</code>: The feature Genus corresponds to the genus or branch within a language family. It is of type string and indicates the specific subgrouping of languages within a language family.</li>
+<li><code>Definite article</code>: Half of the languages do not use the definite article, which signals uniqueness or definiteness of a concept.</li>
+<li><code>Indefinite article</code>: Half of the languages do not use the indefinite article, with some languages using a separate article or the numeral “one.”</li>
+<li><code>Number of cases</code>: Languages vary greatly in the number of morphological cases used.</li>
+<li><code>Order of subject, verb, and object</code>: Different languages have different word orderings, with variations like SOV, SVO, VSO, VOS, OVS, and OSV.</li>
+<li><code>Negative morphemes</code>: Negative morphemes indicate clausal negation in declarative sentences.</li>
+<li><code>Polar questions</code>: Questions with yes/no answers, which can be formed using question particles, interrogative morphology, or intonation.</li>
+<li><code>Position of the negative morpheme</code>: The position of the negative morpheme can vary in relation to subjects and objects.</li>
+<li><code>Prefixing vs. suffixing</code>: Languages differ in their use of prefixes and suffixes in inflectional morphology.</li>
+<li><code>Coding of nominal plurals</code>: Plurals can be expressed through morphological changes or the use of plurality indicator morphemes.</li>
+<li><code>Grammatical genders</code>: Languages vary in the number of grammatical genders used, or may not use the concept at all.</li>
+</ul>
+<p>These language features are available as filtering options in our library. Users can download specific facets of the collection, such as datasets in Slavic languages with interrogative word order for polar questions or datasets from the Afro-Asiatic language family without morphological case-making.</p>
+</section>
+</section>
+<section id="datasheets-for-datasets" class="level2">
+<h2 class="anchored" data-anchor-id="datasheets-for-datasets">Datasheets for Datasets</h2>
+<p>The datasheets provide detailed information about the datasets, including data collection methods, annotation guidelines, and potential biases. They also specify the intended uses and potential limitations of the datasets.</p>
+<p>The initial pool of sentiment datasets was gathered through an extensive search using sources such as Google Scholar, GitHub repositories, and the HuggingFace datasets library. This search yielded a total of <strong>345</strong> datasets.</p>
+<p>To ensure the quality of the datasets, a set of quality assurance criteria was applied to manually filter the initial pool of datasets. The following criteria were used:</p>
+<ol type="1">
+<li><strong>Strong Annotations</strong>: Datasets containing weak annotations, such as labels based on emoji occurrence or automatically generated through classification by machine learning models, were rejected. This decision was made to minimize the presence of noise in the datasets, ensuring higher quality annotations.</li>
+<li><strong>Well-Defined Annotation Protocol</strong>: Datasets without sufficient information about the annotation protocol, including whether the annotation was done manually or automatically and the number of annotators involved, were rejected. This step aimed to avoid merging datasets with contradicting annotation instructions, ensuring consistency across the selected datasets.</li>
+<li><strong>Numerical Ratings</strong>: Datasets with numerical ratings were accepted. Specifically, Likert-type 5-point scales were mapped into three class sentiment labels. Ratings 1 and 2 were mapped to “negative,” rating 3 was mapped to “neutral,” and ratings 4 and 5 were mapped to “positive.” This mapping allowed for consistent sentiment labeling across the datasets.</li>
+<li><strong>Three Classes Only</strong>: Datasets annotated with binary sentiment labels were rejected. The decision to focus on datasets with three sentiment classes (negative, neutral, and positive) was made based on the unsatisfactory performance of binary sentiment labeling in three-class settings.</li>
+<li><strong>Monolingual Datasets</strong>: In cases where a dataset contained samples in multiple languages, it was divided into independent datasets for each constituent language. This approach ensured that the corpus includes separate datasets for different languages, allowing for targeted analysis and evaluation.</li>
+</ol>
+<p>By applying these quality assurance criteria, we were able to filter the initial pool of sentiment datasets and select a final set of <strong>79</strong> datasets that met the specified standards for inclusion in the multilingual corpus.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ss">f"We cover </span><span class="sc">{</span>mms_dataset_df<span class="sc">.</span>original_dataset<span class="sc">.</span>nunique()<span class="sc">}</span><span class="ss"> datasets in </span><span class="sc">{</span>mms_dataset_df<span class="sc">.</span>language<span class="sc">.</span>nunique()<span class="sc">}</span><span class="ss"> languages."</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>'We cover 79 datasets in 27 languages.'</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ss">f"The classes that we cover: </span><span class="sc">{</span>mms_dataset_df<span class="sc">.</span>label_name<span class="sc">.</span>unique()<span class="sc">}</span><span class="ss">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>"The classes that we cover: ['positive' 'neutral' 'negative']"</code></pre>
+</div>
+</div>
+</section>
+<section id="limitations" class="level2">
+<h2 class="anchored" data-anchor-id="limitations">Limitations</h2>
+<p>Despite the fact that our collection is the largest public collection of multilingual sentiment datasets, it still covers only 27 languages. The collection of datasets is highly biased towards the Indo-European family of languages, English in particular. We attribute this bias to the general culture of scientific publishing and its enforcement of English as the primary carrier of scientific discovery. Our work’s main potential negative social impact is that the models developed and trained using the provided datasets may still exhibit better performance for the major languages. This could further perpetuate the existing language disparities and inequality in sentiment analysis capabilities across different languages. Addressing this limitation and working towards more equitable representation and performance across languages is crucial to avoid reinforcing language biases and the potential marginalization of underrepresented languages. The ethical implications of such disparities should be thoroughly discussed and considered.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/quality.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Data Quality</figcaption>
+</figure>
+</div>
+<p>An important limitation of our dataset collection is a significant variance in sample quality across all datasets and all languages. Above figure presents the distribution of self-confidence label-quality score for each data point computed by the <strong>cleanlab</strong> <span class="citation" data-cites="northcutt2021confident">(<a href="#ref-northcutt2021confident" role="doc-biblioref">Northcutt, Jiang, and Chuang 2021</a>)</span>. The distribution of quality is skewed in favor of popular languages, with low-resource languages suffering from data quality issues. A related limitation is caused by an unequal distribution of data modalities across languages. For instance, our benchmark clearly shows that all models universally underperform when tested on Portuguese datasets. This is the direct result of the fact that data points for Portuguese almost exclusively represent the domain of social media. As a consequence, some combinations of filtering facets in our dataset collection produce very little data (i.e., asking for social media data in the Germanic genus of Indo-European languages will produce a significantly larger dataset than asking for news data representing Afro-Asiatic languages).</p>
+<p>Finally, we acknowledge the lack of internal coherence of annotation protocols between datasets and languages. We have enforced strict quality criteria and rejected all datasets published without the annotation protocol, but we were unable, for obvious reasons, to unify annotation guidelines. The annotation of sentiment expressions and the assignment of sentiment labels are heavily subjective and, at the same time, influenced by cultural and linguistic features. Unfortunately, it is possible that semantically similar utterances will be assigned conflicting labels if they come from different datasets or modalities.</p>
+<section id="filter-examples-by-annotation-qualitym" class="level3">
+<h3 class="anchored" data-anchor-id="filter-examples-by-annotation-qualitym">Filter examples by annotation qualitym</h3>
+<p>We know how imporant data quality is for the model training processes. Hence, we added cleanlab scores to each of 6M+ examples in all datasets. Now, it is enalbe to filter examples based on how good quality of data do you need for traning.</p>
+<p>We can sort examples by top data quality. Cleanlab’s <code>self confidence</code> is a function to compute label-quality scores for classification datasets, where lower scores indicate labels less likely to be correct. Hence, for the best quality we want to have the highest scores.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>clean_labels_data <span class="op">=</span> mms_dataset_df.sort_values(by<span class="op">=</span><span class="st">"cleanlab_self_confidence"</span>, ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">10_000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>clean_labels_data.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">_id</th>
+<th data-quarto-table-cell-role="th">text</th>
+<th data-quarto-table-cell-role="th">label</th>
+<th data-quarto-table-cell-role="th">original_dataset</th>
+<th data-quarto-table-cell-role="th">domain</th>
+<th data-quarto-table-cell-role="th">language</th>
+<th data-quarto-table-cell-role="th">Family</th>
+<th data-quarto-table-cell-role="th">Genus</th>
+<th data-quarto-table-cell-role="th">Definite articles</th>
+<th data-quarto-table-cell-role="th">Indefinite articles</th>
+<th data-quarto-table-cell-role="th">Number of cases</th>
+<th data-quarto-table-cell-role="th">Order of subject, object, verb</th>
+<th data-quarto-table-cell-role="th">Negative morphemes</th>
+<th data-quarto-table-cell-role="th">Polar questions</th>
+<th data-quarto-table-cell-role="th">Position of negative word wrt SOV</th>
+<th data-quarto-table-cell-role="th">Prefixing vs suffixing</th>
+<th data-quarto-table-cell-role="th">Coding of nominal plurality</th>
+<th data-quarto-table-cell-role="th">Grammatical genders</th>
+<th data-quarto-table-cell-role="th">cleanlab_self_confidence</th>
+<th data-quarto-table-cell-role="th">label_name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">3075302</td>
+<td>3075302</td>
+<td>Great addition to any fan's yard! Show your te...</td>
+<td>2</td>
+<td>en_amazon</td>
+<td>reviews</td>
+<td>en</td>
+<td>Indo-European</td>
+<td>Germanic</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word distinct from one</td>
+<td>2</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>no grammatical gender</td>
+<td>0.999981</td>
+<td>positive</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">629922</td>
+<td>629922</td>
+<td>مخيب للأمل. . ىحَ</td>
+<td>0</td>
+<td>ar_hard</td>
+<td>reviews</td>
+<td>ar</td>
+<td>Afro-Asiatic</td>
+<td>Semitic</td>
+<td>definite affix</td>
+<td>no article</td>
+<td>3</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative intonation only</td>
+<td>SNegVO</td>
+<td>weakly suffixing</td>
+<td>mixed morphological plural</td>
+<td>masculine, feminine</td>
+<td>0.999964</td>
+<td>negative</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2858237</td>
+<td>2858237</td>
+<td>This is a great flag to display your love of A...</td>
+<td>2</td>
+<td>en_amazon</td>
+<td>reviews</td>
+<td>en</td>
+<td>Indo-European</td>
+<td>Germanic</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word distinct from one</td>
+<td>2</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>no grammatical gender</td>
+<td>0.999950</td>
+<td>positive</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3110031</td>
+<td>3110031</td>
+<td>One of the best knives I now proudly own! Am a...</td>
+<td>2</td>
+<td>en_amazon</td>
+<td>reviews</td>
+<td>en</td>
+<td>Indo-European</td>
+<td>Germanic</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word distinct from one</td>
+<td>2</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>no grammatical gender</td>
+<td>0.999950</td>
+<td>positive</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2052971</td>
+<td>2052971</td>
+<td>Amen! My Savior Loves! Wonderful testimony!</td>
+<td>2</td>
+<td>en_amazon</td>
+<td>reviews</td>
+<td>en</td>
+<td>Indo-European</td>
+<td>Germanic</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word distinct from one</td>
+<td>2</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>no grammatical gender</td>
+<td>0.999948</td>
+<td>positive</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="datasets" class="level2">
+<h2 class="anchored" data-anchor-id="datasets">Datasets</h2>
+<p>We added all necessary citations to the HuggingFace datasets card. You can find them inside citation key. We added a helper fuinctions to parse them.</p>
+<p>We can load citations as strings - easy adding to bibtex.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mms_benchmark.citations <span class="im">import</span> get_citations</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(get_citations(mms_dataset[<span class="st">"train"</span>], citation_as_dict<span class="op">=</span><span class="va">False</span>)[<span class="st">"pl_polemo"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>@inproceedings{dataset_pl_polemo,
+    title = "Multi-Level Sentiment Analysis of {P}ol{E}mo 2.0: Extended Corpus of Multi-Domain Consumer Reviews",
+    author = "Koco{\'n}, Jan  and
+        Mi{\l}kowski, Piotr  and
+        Za{\'s}ko-Zieli{\'n}ska, Monika",
+    booktitle = "Proceedings of the 23rd Conference on Computational Natural Language Learning (CoNLL)",
+    month = nov,
+    year = "2019",
+    address = "Hong Kong, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/K19-1092",
+    doi = "10.18653/v1/K19-1092",
+    pages = "980--991"
+}
+% ------------------------------------------------------------------------------------------
+</code></pre>
+</div>
+</div>
+<p>Or as dictionary for working with them.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>citations <span class="op">=</span> get_citations(mms_dataset[<span class="st">"train"</span>], citation_as_dict<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>citations[<span class="st">"pl_polemo"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>{'pages': '980--991',
+ 'doi': '10.18653/v1/K19-1092',
+ 'url': 'https://aclanthology.org/K19-1092',
+ 'publisher': 'Association for Computational Linguistics',
+ 'address': 'Hong Kong, China',
+ 'year': '2019',
+ 'month': 'November',
+ 'booktitle': 'Proceedings of the 23rd Conference on Computational Natural Language Learning (CoNLL)',
+ 'author': "Koco{\\'n}, Jan  and\nMi{\\l}kowski, Piotr  and\nZa{\\'s}ko-Zieli{\\'n}ska, Monika",
+ 'title': 'Multi-Level Sentiment Analysis of {P}ol{E}mo 2.0: Extended Corpus of Multi-Domain Consumer Reviews',
+ 'ENTRYTYPE': 'inproceedings',
+ 'ID': 'dataset_pl_polemo'}</code></pre>
+</div>
+</div>
+<section id="show-all-datasets-with-citations-in-a-table" class="level3">
+<h3 class="anchored" data-anchor-id="show-all-datasets-with-citations-in-a-table">Show all datasets with citations in a table</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>mms_dataset_df[<span class="st">"citation"</span>] <span class="op">=</span> mms_dataset_df[<span class="st">"original_dataset"</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: <span class="ss">f'[@</span><span class="sc">{</span>citations[x][<span class="st">"ID"</span>]<span class="sc">}</span><span class="ss">]'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>mms_dataset_df[DATASET_COLS].drop_duplicates().sort_values(<span class="st">"language"</span>).reset_index(drop<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">language</th>
+<th data-quarto-table-cell-role="th">original_dataset</th>
+<th data-quarto-table-cell-role="th">domain</th>
+<th data-quarto-table-cell-role="th">Family</th>
+<th data-quarto-table-cell-role="th">Genus</th>
+<th data-quarto-table-cell-role="th">Definite articles</th>
+<th data-quarto-table-cell-role="th">Indefinite articles</th>
+<th data-quarto-table-cell-role="th">Number of cases</th>
+<th data-quarto-table-cell-role="th">Order of subject, object, verb</th>
+<th data-quarto-table-cell-role="th">Negative morphemes</th>
+<th data-quarto-table-cell-role="th">Polar questions</th>
+<th data-quarto-table-cell-role="th">Position of negative word wrt SOV</th>
+<th data-quarto-table-cell-role="th">Prefixing vs suffixing</th>
+<th data-quarto-table-cell-role="th">Coding of nominal plurality</th>
+<th data-quarto-table-cell-role="th">Grammatical genders</th>
+<th data-quarto-table-cell-role="th">citation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>ar</td>
+<td>ar_arsentdl</td>
+<td>social_media</td>
+<td>Afro-Asiatic</td>
+<td>Semitic</td>
+<td>definite affix</td>
+<td>no article</td>
+<td>3</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative intonation only</td>
+<td>SNegVO</td>
+<td>weakly suffixing</td>
+<td>mixed morphological plural</td>
+<td>masculine, feminine</td>
+<td>[@dataset_ar_arsentdl]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>ar</td>
+<td>ar_semeval_2017</td>
+<td>mixed</td>
+<td>Afro-Asiatic</td>
+<td>Semitic</td>
+<td>definite affix</td>
+<td>no article</td>
+<td>3</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative intonation only</td>
+<td>SNegVO</td>
+<td>weakly suffixing</td>
+<td>mixed morphological plural</td>
+<td>masculine, feminine</td>
+<td>[@dataset_semeval_2017]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>ar</td>
+<td>ar_oclar</td>
+<td>reviews</td>
+<td>Afro-Asiatic</td>
+<td>Semitic</td>
+<td>definite affix</td>
+<td>no article</td>
+<td>3</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative intonation only</td>
+<td>SNegVO</td>
+<td>weakly suffixing</td>
+<td>mixed morphological plural</td>
+<td>masculine, feminine</td>
+<td>[@dataset_ar_oclar]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>ar</td>
+<td>ar_labr</td>
+<td>reviews</td>
+<td>Afro-Asiatic</td>
+<td>Semitic</td>
+<td>definite affix</td>
+<td>no article</td>
+<td>3</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative intonation only</td>
+<td>SNegVO</td>
+<td>weakly suffixing</td>
+<td>mixed morphological plural</td>
+<td>masculine, feminine</td>
+<td>[@dataset_ar_labr]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>ar</td>
+<td>ar_syria_corpus</td>
+<td>social_media</td>
+<td>Afro-Asiatic</td>
+<td>Semitic</td>
+<td>definite affix</td>
+<td>no article</td>
+<td>3</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative intonation only</td>
+<td>SNegVO</td>
+<td>weakly suffixing</td>
+<td>mixed morphological plural</td>
+<td>masculine, feminine</td>
+<td>[@dataset_ar_bbn]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>ar</td>
+<td>ar_brad</td>
+<td>reviews</td>
+<td>Afro-Asiatic</td>
+<td>Semitic</td>
+<td>definite affix</td>
+<td>no article</td>
+<td>3</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative intonation only</td>
+<td>SNegVO</td>
+<td>weakly suffixing</td>
+<td>mixed morphological plural</td>
+<td>masculine, feminine</td>
+<td>[@dataset_ar_brad]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>ar</td>
+<td>ar_bbn</td>
+<td>social_media</td>
+<td>Afro-Asiatic</td>
+<td>Semitic</td>
+<td>definite affix</td>
+<td>no article</td>
+<td>3</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative intonation only</td>
+<td>SNegVO</td>
+<td>weakly suffixing</td>
+<td>mixed morphological plural</td>
+<td>masculine, feminine</td>
+<td>[@dataset_ar_bbn]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">7</td>
+<td>ar</td>
+<td>ar_astd</td>
+<td>social_media</td>
+<td>Afro-Asiatic</td>
+<td>Semitic</td>
+<td>definite affix</td>
+<td>no article</td>
+<td>3</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative intonation only</td>
+<td>SNegVO</td>
+<td>weakly suffixing</td>
+<td>mixed morphological plural</td>
+<td>masculine, feminine</td>
+<td>[@dataset_ar_astd]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">8</td>
+<td>ar</td>
+<td>ar_hard</td>
+<td>reviews</td>
+<td>Afro-Asiatic</td>
+<td>Semitic</td>
+<td>definite affix</td>
+<td>no article</td>
+<td>3</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative intonation only</td>
+<td>SNegVO</td>
+<td>weakly suffixing</td>
+<td>mixed morphological plural</td>
+<td>masculine, feminine</td>
+<td>[@dataset_ar_hard]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">9</td>
+<td>bg</td>
+<td>bg_twitter_sentiment</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Slavic</td>
+<td>definite word distinct from demonstrative</td>
+<td>no article</td>
+<td>no morphological case-making</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine, neuter</td>
+<td>[@dataset_twitter_sentiment]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">10</td>
+<td>bs</td>
+<td>bs_twitter_sentiment</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Slavic</td>
+<td>no article</td>
+<td>no article</td>
+<td>5</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>other</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine, neuter</td>
+<td>[@dataset_twitter_sentiment]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">11</td>
+<td>cs</td>
+<td>cs_facebook</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Slavic</td>
+<td>no article</td>
+<td>no article</td>
+<td>6-7</td>
+<td>SVO</td>
+<td>negative affix</td>
+<td>interrogative word order</td>
+<td>MorphNeg</td>
+<td>weakly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine, neuter</td>
+<td>[@dataset_cs_social_media]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">12</td>
+<td>cs</td>
+<td>cs_mall_product_reviews</td>
+<td>reviews</td>
+<td>Indo-European</td>
+<td>Slavic</td>
+<td>no article</td>
+<td>no article</td>
+<td>6-7</td>
+<td>SVO</td>
+<td>negative affix</td>
+<td>interrogative word order</td>
+<td>MorphNeg</td>
+<td>weakly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine, neuter</td>
+<td>[@dataset_cs_social_media]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">13</td>
+<td>cs</td>
+<td>cs_movie_reviews</td>
+<td>reviews</td>
+<td>Indo-European</td>
+<td>Slavic</td>
+<td>no article</td>
+<td>no article</td>
+<td>6-7</td>
+<td>SVO</td>
+<td>negative affix</td>
+<td>interrogative word order</td>
+<td>MorphNeg</td>
+<td>weakly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine, neuter</td>
+<td>[@dataset_cs_social_media]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">14</td>
+<td>cs</td>
+<td>cs_news_stance</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Slavic</td>
+<td>no article</td>
+<td>no article</td>
+<td>6-7</td>
+<td>SVO</td>
+<td>negative affix</td>
+<td>interrogative word order</td>
+<td>MorphNeg</td>
+<td>weakly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine, neuter</td>
+<td>[@dataset_cs_social_media]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">15</td>
+<td>de</td>
+<td>de_twitter_sentiment</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Germanic</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word same as one</td>
+<td>4</td>
+<td>no dominant order</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>more than one position</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine, neuter</td>
+<td>[@dataset_twitter_sentiment]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">16</td>
+<td>de</td>
+<td>de_omp</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Germanic</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word same as one</td>
+<td>4</td>
+<td>no dominant order</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>more than one position</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine, neuter</td>
+<td>[@dataset_de_omp]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">17</td>
+<td>de</td>
+<td>de_sb10k</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Germanic</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word same as one</td>
+<td>4</td>
+<td>no dominant order</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>more than one position</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine, neuter</td>
+<td>[@dataset_de_sb10k]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">18</td>
+<td>de</td>
+<td>de_ifeel</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Germanic</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word same as one</td>
+<td>4</td>
+<td>no dominant order</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>more than one position</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine, neuter</td>
+<td>[@dataset_dai_labor]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">19</td>
+<td>de</td>
+<td>de_dai_labor</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Germanic</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word same as one</td>
+<td>4</td>
+<td>no dominant order</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>more than one position</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine, neuter</td>
+<td>[@dataset_dai_labor]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">20</td>
+<td>de</td>
+<td>de_multilan_amazon</td>
+<td>reviews</td>
+<td>Indo-European</td>
+<td>Germanic</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word same as one</td>
+<td>4</td>
+<td>no dominant order</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>more than one position</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine, neuter</td>
+<td>[@dataset_multilan_amazon]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">21</td>
+<td>en</td>
+<td>en_vader_twitter</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Germanic</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word distinct from one</td>
+<td>2</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>no grammatical gender</td>
+<td>[@dataset_en_vader]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">22</td>
+<td>en</td>
+<td>en_vader_nyt</td>
+<td>news</td>
+<td>Indo-European</td>
+<td>Germanic</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word distinct from one</td>
+<td>2</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>no grammatical gender</td>
+<td>[@dataset_en_vader]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">23</td>
+<td>en</td>
+<td>en_vader_movie_reviews</td>
+<td>reviews</td>
+<td>Indo-European</td>
+<td>Germanic</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word distinct from one</td>
+<td>2</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>no grammatical gender</td>
+<td>[@dataset_en_vader]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">24</td>
+<td>en</td>
+<td>en_vader_amazon</td>
+<td>reviews</td>
+<td>Indo-European</td>
+<td>Germanic</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word distinct from one</td>
+<td>2</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>no grammatical gender</td>
+<td>[@dataset_en_vader]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">25</td>
+<td>en</td>
+<td>en_twitter_sentiment</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Germanic</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word distinct from one</td>
+<td>2</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>no grammatical gender</td>
+<td>[@dataset_twitter_sentiment]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">26</td>
+<td>en</td>
+<td>en_tweets_sanders</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Germanic</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word distinct from one</td>
+<td>2</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>no grammatical gender</td>
+<td>[@dataset_en_tweets_sanders]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">27</td>
+<td>en</td>
+<td>en_tweet_airlines</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Germanic</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word distinct from one</td>
+<td>2</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>no grammatical gender</td>
+<td>[@dataset_en_tweet_airlines]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">28</td>
+<td>en</td>
+<td>en_silicone_sem</td>
+<td>chats</td>
+<td>Indo-European</td>
+<td>Germanic</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word distinct from one</td>
+<td>2</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>no grammatical gender</td>
+<td>[@dataset_en_silicone]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">29</td>
+<td>en</td>
+<td>en_sentistrength</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Germanic</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word distinct from one</td>
+<td>2</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>no grammatical gender</td>
+<td>[@dataset_en_sentistrength]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">30</td>
+<td>en</td>
+<td>en_semeval_2017</td>
+<td>mixed</td>
+<td>Indo-European</td>
+<td>Germanic</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word distinct from one</td>
+<td>2</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>no grammatical gender</td>
+<td>[@dataset_semeval_2017]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">31</td>
+<td>en</td>
+<td>en_poem_sentiment</td>
+<td>poems</td>
+<td>Indo-European</td>
+<td>Germanic</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word distinct from one</td>
+<td>2</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>no grammatical gender</td>
+<td>[@dataset_en_poem_sentiment]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">32</td>
+<td>en</td>
+<td>en_per_sent</td>
+<td>news</td>
+<td>Indo-European</td>
+<td>Germanic</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word distinct from one</td>
+<td>2</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>no grammatical gender</td>
+<td>[@dataset_en_per_sent]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">33</td>
+<td>en</td>
+<td>en_multilan_amazon</td>
+<td>reviews</td>
+<td>Indo-European</td>
+<td>Germanic</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word distinct from one</td>
+<td>2</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>no grammatical gender</td>
+<td>[@dataset_multilan_amazon]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">34</td>
+<td>en</td>
+<td>en_financial_phrasebank_sentences_75agree</td>
+<td>news</td>
+<td>Indo-European</td>
+<td>Germanic</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word distinct from one</td>
+<td>2</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>no grammatical gender</td>
+<td>[@dataset_en_financial_phrasebank_sentences_75agree]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">35</td>
+<td>en</td>
+<td>en_dai_labor</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Germanic</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word distinct from one</td>
+<td>2</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>no grammatical gender</td>
+<td>[@dataset_dai_labor]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">36</td>
+<td>en</td>
+<td>en_amazon</td>
+<td>reviews</td>
+<td>Indo-European</td>
+<td>Germanic</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word distinct from one</td>
+<td>2</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>no grammatical gender</td>
+<td>[@dataset_en_amazon]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">37</td>
+<td>en</td>
+<td>en_silicone_meld_s</td>
+<td>chats</td>
+<td>Indo-European</td>
+<td>Germanic</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word distinct from one</td>
+<td>2</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>no grammatical gender</td>
+<td>[@dataset_en_silicone]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">38</td>
+<td>es</td>
+<td>es_twitter_sentiment</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Romance</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word same as one</td>
+<td>no morphological case-making</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine</td>
+<td>[@dataset_twitter_sentiment]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">39</td>
+<td>es</td>
+<td>es_semeval2020</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Romance</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word same as one</td>
+<td>no morphological case-making</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine</td>
+<td>[@dataset_semeval_2020]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">40</td>
+<td>es</td>
+<td>es_multilan_amazon</td>
+<td>reviews</td>
+<td>Indo-European</td>
+<td>Romance</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word same as one</td>
+<td>no morphological case-making</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine</td>
+<td>[@dataset_multilan_amazon]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">41</td>
+<td>es</td>
+<td>es_muchocine</td>
+<td>reviews</td>
+<td>Indo-European</td>
+<td>Romance</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word same as one</td>
+<td>no morphological case-making</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine</td>
+<td>[@dataset_es_muchocine]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">42</td>
+<td>es</td>
+<td>es_paper_reviews</td>
+<td>reviews</td>
+<td>Indo-European</td>
+<td>Romance</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word same as one</td>
+<td>no morphological case-making</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine</td>
+<td>[@dataset_es_paper_reviews]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">43</td>
+<td>fa</td>
+<td>fa_sentipers</td>
+<td>reviews</td>
+<td>Indo-European</td>
+<td>Iranian</td>
+<td>no article</td>
+<td>indefinite word same as one</td>
+<td>2</td>
+<td>SOV</td>
+<td>negative affix</td>
+<td>question particle</td>
+<td>MorphNeg</td>
+<td>weakly suffixing</td>
+<td>plural suffix</td>
+<td>no grammatical gender</td>
+<td>[@dataset_fa_sentipers]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">44</td>
+<td>fr</td>
+<td>fr_dai_labor</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Romance</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word same as one</td>
+<td>no morphological case-making</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>OptDoubleNeg</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine</td>
+<td>[@dataset_dai_labor]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">45</td>
+<td>fr</td>
+<td>fr_ifeel</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Romance</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word same as one</td>
+<td>no morphological case-making</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>OptDoubleNeg</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine</td>
+<td>[@dataset_dai_labor]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">46</td>
+<td>fr</td>
+<td>fr_multilan_amazon</td>
+<td>reviews</td>
+<td>Indo-European</td>
+<td>Romance</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word same as one</td>
+<td>no morphological case-making</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>OptDoubleNeg</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine</td>
+<td>[@dataset_multilan_amazon]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">47</td>
+<td>he</td>
+<td>he_hebrew_sentiment</td>
+<td>social_media</td>
+<td>Afro-Asiatic</td>
+<td>Semitic</td>
+<td>definite affix</td>
+<td>indefinite word same as one</td>
+<td>no morphological case-making</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>SNegVO</td>
+<td>weakly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine</td>
+<td>[@dataset_he_hebrew_sentiment]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">48</td>
+<td>hi</td>
+<td>hi_semeval2020</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Indic</td>
+<td>no article</td>
+<td>no article</td>
+<td>3</td>
+<td>SOV</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>SONegV</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine</td>
+<td>[@dataset_semeval_2020]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">49</td>
+<td>hr</td>
+<td>hr_sentiment_news_document</td>
+<td>news</td>
+<td>Indo-European</td>
+<td>Slavic</td>
+<td>no article</td>
+<td>no article</td>
+<td>5</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>other</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine, neuter</td>
+<td>[@dataset_hr_sentiment_news_document]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">50</td>
+<td>hr</td>
+<td>hr_twitter_sentiment</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Slavic</td>
+<td>no article</td>
+<td>no article</td>
+<td>5</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>other</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine, neuter</td>
+<td>[@dataset_twitter_sentiment]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">51</td>
+<td>hu</td>
+<td>hu_twitter_sentiment</td>
+<td>social_media</td>
+<td>Uralic</td>
+<td>Ugric</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word distinct from one</td>
+<td>10 or more</td>
+<td>no dominant order</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>no grammatical gender</td>
+<td>[@dataset_twitter_sentiment]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">52</td>
+<td>it</td>
+<td>it_evalita2016</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Romance</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word same as one</td>
+<td>no morphological case-making</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative intonation only</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine</td>
+<td>[@dataset_it_evalita2016]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">53</td>
+<td>it</td>
+<td>it_multiemotions</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Romance</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word same as one</td>
+<td>no morphological case-making</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative intonation only</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine</td>
+<td>[@dataset_it_multiemotions]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">54</td>
+<td>ja</td>
+<td>ja_multilan_amazon</td>
+<td>reviews</td>
+<td>Japanese</td>
+<td>Japanese</td>
+<td>no article</td>
+<td>indefinite word distinct from one</td>
+<td>8-9</td>
+<td>SOV</td>
+<td>negative affix</td>
+<td>question particle</td>
+<td>MorphNeg</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>no grammatical gender</td>
+<td>[@dataset_multilan_amazon]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">55</td>
+<td>lv</td>
+<td>lv_ltec_sentiment</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Baltic</td>
+<td>demonstrative word used as definite article</td>
+<td>indefinite word same as one</td>
+<td>5</td>
+<td>SVO</td>
+<td>negative affix</td>
+<td>question particle</td>
+<td>MorphNeg</td>
+<td>weakly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine</td>
+<td>[@dataset_lv_ltec_sentiment]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">56</td>
+<td>pl</td>
+<td>pl_twitter_sentiment</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Slavic</td>
+<td>no article</td>
+<td>no article</td>
+<td>6-7</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine, neuter</td>
+<td>[@dataset_twitter_sentiment]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">57</td>
+<td>pl</td>
+<td>pl_polemo</td>
+<td>reviews</td>
+<td>Indo-European</td>
+<td>Slavic</td>
+<td>no article</td>
+<td>no article</td>
+<td>6-7</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine, neuter</td>
+<td>[@dataset_pl_polemo]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">58</td>
+<td>pl</td>
+<td>pl_klej_allegro_reviews</td>
+<td>reviews</td>
+<td>Indo-European</td>
+<td>Slavic</td>
+<td>no article</td>
+<td>no article</td>
+<td>6-7</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine, neuter</td>
+<td>[@dataset_pl_klej_allegro_reviews]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">59</td>
+<td>pl</td>
+<td>pl_opi_lil_2012</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Slavic</td>
+<td>no article</td>
+<td>no article</td>
+<td>6-7</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine, neuter</td>
+<td>[@dataset_pl_opi_lil_2012]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">60</td>
+<td>pt</td>
+<td>pt_dai_labor</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Romance</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word same as one</td>
+<td>no morphological case-making</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine</td>
+<td>[@dataset_dai_labor]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">61</td>
+<td>pt</td>
+<td>pt_ifeel</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Romance</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word same as one</td>
+<td>no morphological case-making</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine</td>
+<td>[@dataset_dai_labor]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">62</td>
+<td>pt</td>
+<td>pt_tweet_sent_br</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Romance</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word same as one</td>
+<td>no morphological case-making</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine</td>
+<td>[@dataset_pt_tweet_sent_br]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">63</td>
+<td>pt</td>
+<td>pt_twitter_sentiment</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Romance</td>
+<td>definite word distinct from demonstrative</td>
+<td>indefinite word same as one</td>
+<td>no morphological case-making</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine</td>
+<td>[@dataset_twitter_sentiment]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">64</td>
+<td>ru</td>
+<td>ru_sentiment</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Slavic</td>
+<td>no article</td>
+<td>no article</td>
+<td>6-7</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine, neuter</td>
+<td>[@dataset_ru_sentiment]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">65</td>
+<td>ru</td>
+<td>ru_twitter_sentiment</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Slavic</td>
+<td>no article</td>
+<td>no article</td>
+<td>6-7</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine, neuter</td>
+<td>[@dataset_twitter_sentiment]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">66</td>
+<td>sk</td>
+<td>sk_twitter_sentiment</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Slavic</td>
+<td>no article</td>
+<td>no article</td>
+<td>6-7</td>
+<td>SVO</td>
+<td>negative affix</td>
+<td>interrogative word order</td>
+<td>MorphNeg</td>
+<td>weakly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine, neuter</td>
+<td>[@dataset_twitter_sentiment]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">67</td>
+<td>sl</td>
+<td>sl_sentinews</td>
+<td>news</td>
+<td>Indo-European</td>
+<td>Slavic</td>
+<td>no article</td>
+<td>no article</td>
+<td>6-7</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine, neuter</td>
+<td>[@Bučar2018]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">68</td>
+<td>sl</td>
+<td>sl_twitter_sentiment</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Slavic</td>
+<td>no article</td>
+<td>no article</td>
+<td>6-7</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine, neuter</td>
+<td>[@dataset_twitter_sentiment]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">69</td>
+<td>sq</td>
+<td>sq_twitter_sentiment</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Albanian</td>
+<td>definite affix</td>
+<td>indefinite word distinct from one</td>
+<td>4</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>SNegVO</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine</td>
+<td>[@dataset_twitter_sentiment]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">70</td>
+<td>sr</td>
+<td>sr_movie_reviews</td>
+<td>reviews</td>
+<td>Indo-European</td>
+<td>Slavic</td>
+<td>no article</td>
+<td>no article</td>
+<td>5</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>other</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine, neuter</td>
+<td>[@dataset_sr_serb_movie_reviews]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">71</td>
+<td>sr</td>
+<td>sr_senticomments</td>
+<td>reviews</td>
+<td>Indo-European</td>
+<td>Slavic</td>
+<td>no article</td>
+<td>no article</td>
+<td>5</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>other</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine, neuter</td>
+<td>[@dataset_sr_senticomments]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">72</td>
+<td>sr</td>
+<td>sr_twitter_sentiment</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Slavic</td>
+<td>no article</td>
+<td>no article</td>
+<td>5</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>other</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine, neuter</td>
+<td>[@dataset_twitter_sentiment]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">73</td>
+<td>sv</td>
+<td>sv_twitter_sentiment</td>
+<td>social_media</td>
+<td>Indo-European</td>
+<td>Germanic</td>
+<td>definite affix</td>
+<td>indefinite word same as one</td>
+<td>2</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>interrogative word order</td>
+<td>more than one position</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>common, neuter</td>
+<td>[@dataset_twitter_sentiment]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">74</td>
+<td>th</td>
+<td>th_wongnai_reviews</td>
+<td>reviews</td>
+<td>Tai-Kadai</td>
+<td>Kam-Tai</td>
+<td>no article</td>
+<td>indefinite word distinct from one</td>
+<td>no morphological case-making</td>
+<td>SVO</td>
+<td>negative auxiliary verb</td>
+<td>question particle</td>
+<td>SNegVO</td>
+<td>little affixation</td>
+<td>mixed morphological plural</td>
+<td>noun classifiers</td>
+<td>[@dataset_th_wongnai_reviews]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">75</td>
+<td>th</td>
+<td>th_wisesight_sentiment</td>
+<td>social_media</td>
+<td>Tai-Kadai</td>
+<td>Kam-Tai</td>
+<td>no article</td>
+<td>indefinite word distinct from one</td>
+<td>no morphological case-making</td>
+<td>SVO</td>
+<td>negative auxiliary verb</td>
+<td>question particle</td>
+<td>SNegVO</td>
+<td>little affixation</td>
+<td>mixed morphological plural</td>
+<td>noun classifiers</td>
+<td>[@dataset_th_wisesight_sentiment]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">76</td>
+<td>ur</td>
+<td>ur_roman_urdu</td>
+<td>mixed</td>
+<td>Indo-European</td>
+<td>Indic</td>
+<td>no article</td>
+<td>no article</td>
+<td>2</td>
+<td>SOV</td>
+<td>negative affix</td>
+<td>question particle</td>
+<td>SONegV</td>
+<td>strongly suffixing</td>
+<td>plural suffix</td>
+<td>masculine, feminine</td>
+<td>[@dataset_ur_roman_urdu]</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">77</td>
+<td>zh</td>
+<td>zh_hotel_reviews</td>
+<td>reviews</td>
+<td>Sino-Tibetan</td>
+<td>Chinese</td>
+<td>no article</td>
+<td>indefinite word same as one</td>
+<td>no morphological case-making</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>SNegVO</td>
+<td>little affixation</td>
+<td>no plural</td>
+<td>noun classifiers</td>
+<td>[@dataset_zh_hotel_reviews]</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">78</td>
+<td>zh</td>
+<td>zh_multilan_amazon</td>
+<td>reviews</td>
+<td>Sino-Tibetan</td>
+<td>Chinese</td>
+<td>no article</td>
+<td>indefinite word same as one</td>
+<td>no morphological case-making</td>
+<td>SVO</td>
+<td>negative particle</td>
+<td>question particle</td>
+<td>SNegVO</td>
+<td>little affixation</td>
+<td>no plural</td>
+<td>noun classifiers</td>
+<td>[@dataset_multilan_amazon]</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="dataset-stats" class="level2">
+<h2 class="anchored" data-anchor-id="dataset-stats">Dataset Stats</h2>
+<section id="datasets-per-language" class="level3">
+<h3 class="anchored" data-anchor-id="datasets-per-language">Datasets per language</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(mms_dataset_df.groupby(<span class="st">"language"</span>).original_dataset.nunique().sort_values(ascending<span class="op">=</span><span class="va">False</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">original_dataset</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">language</th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">en</td>
+<td>17</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">ar</td>
+<td>9</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">de</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">es</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">pl</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">cs</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">pt</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">sr</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">fr</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">th</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">sl</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">ru</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">it</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">hr</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">zh</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">bg</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">ja</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">lv</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">hu</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">hi</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">sk</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">he</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">sq</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">fa</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">sv</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">bs</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">ur</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="labels-per-language" class="level3">
+<h3 class="anchored" data-anchor-id="labels-per-language">Labels per language</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(mms_dataset_df.groupby(by<span class="op">=</span>[<span class="st">"language"</span>, <span class="st">"label_name"</span>]).count()[<span class="st">"text"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">text</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">language</th>
+<th data-quarto-table-cell-role="th">label_name</th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td rowspan="3" data-quarto-table-cell-role="th" data-valign="top">ar</td>
+<td data-quarto-table-cell-role="th">negative</td>
+<td>138899</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">neutral</td>
+<td>192774</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">positive</td>
+<td>600402</td>
+</tr>
+<tr class="even">
+<td rowspan="3" data-quarto-table-cell-role="th" data-valign="top">bg</td>
+<td data-quarto-table-cell-role="th">negative</td>
+<td>13930</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">neutral</td>
+<td>28657</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">positive</td>
+<td>19563</td>
+</tr>
+<tr class="odd">
+<td rowspan="3" data-quarto-table-cell-role="th" data-valign="top">bs</td>
+<td data-quarto-table-cell-role="th">negative</td>
+<td>11974</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">neutral</td>
+<td>11145</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">positive</td>
+<td>13064</td>
+</tr>
+<tr class="even">
+<td rowspan="3" data-quarto-table-cell-role="th" data-valign="top">cs</td>
+<td data-quarto-table-cell-role="th">negative</td>
+<td>39674</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">neutral</td>
+<td>59200</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">positive</td>
+<td>97413</td>
+</tr>
+<tr class="odd">
+<td rowspan="3" data-quarto-table-cell-role="th" data-valign="top">de</td>
+<td data-quarto-table-cell-role="th">negative</td>
+<td>104667</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">neutral</td>
+<td>100071</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">positive</td>
+<td>111149</td>
+</tr>
+<tr class="even">
+<td rowspan="3" data-quarto-table-cell-role="th" data-valign="top">en</td>
+<td data-quarto-table-cell-role="th">negative</td>
+<td>304939</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">neutral</td>
+<td>290823</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">positive</td>
+<td>1734724</td>
+</tr>
+<tr class="odd">
+<td rowspan="3" data-quarto-table-cell-role="th" data-valign="top">es</td>
+<td data-quarto-table-cell-role="th">negative</td>
+<td>108733</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">neutral</td>
+<td>122493</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">positive</td>
+<td>187486</td>
+</tr>
+<tr class="even">
+<td rowspan="3" data-quarto-table-cell-role="th" data-valign="top">fa</td>
+<td data-quarto-table-cell-role="th">negative</td>
+<td>1602</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">neutral</td>
+<td>5091</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">positive</td>
+<td>6832</td>
+</tr>
+<tr class="odd">
+<td rowspan="3" data-quarto-table-cell-role="th" data-valign="top">fr</td>
+<td data-quarto-table-cell-role="th">negative</td>
+<td>84187</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">neutral</td>
+<td>43245</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">positive</td>
+<td>83199</td>
+</tr>
+<tr class="even">
+<td rowspan="3" data-quarto-table-cell-role="th" data-valign="top">he</td>
+<td data-quarto-table-cell-role="th">negative</td>
+<td>2279</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">neutral</td>
+<td>243</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">positive</td>
+<td>6097</td>
+</tr>
+<tr class="odd">
+<td rowspan="3" data-quarto-table-cell-role="th" data-valign="top">hi</td>
+<td data-quarto-table-cell-role="th">negative</td>
+<td>4992</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">neutral</td>
+<td>6392</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">positive</td>
+<td>5615</td>
+</tr>
+<tr class="even">
+<td rowspan="3" data-quarto-table-cell-role="th" data-valign="top">hr</td>
+<td data-quarto-table-cell-role="th">negative</td>
+<td>19757</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">neutral</td>
+<td>19470</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">positive</td>
+<td>38367</td>
+</tr>
+<tr class="odd">
+<td rowspan="3" data-quarto-table-cell-role="th" data-valign="top">hu</td>
+<td data-quarto-table-cell-role="th">negative</td>
+<td>8974</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">neutral</td>
+<td>17621</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">positive</td>
+<td>30087</td>
+</tr>
+<tr class="even">
+<td rowspan="3" data-quarto-table-cell-role="th" data-valign="top">it</td>
+<td data-quarto-table-cell-role="th">negative</td>
+<td>4043</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">neutral</td>
+<td>4193</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">positive</td>
+<td>3829</td>
+</tr>
+<tr class="odd">
+<td rowspan="3" data-quarto-table-cell-role="th" data-valign="top">ja</td>
+<td data-quarto-table-cell-role="th">negative</td>
+<td>83982</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">neutral</td>
+<td>41979</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">positive</td>
+<td>83819</td>
+</tr>
+<tr class="even">
+<td rowspan="3" data-quarto-table-cell-role="th" data-valign="top">lv</td>
+<td data-quarto-table-cell-role="th">negative</td>
+<td>1378</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">neutral</td>
+<td>2618</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">positive</td>
+<td>1794</td>
+</tr>
+<tr class="odd">
+<td rowspan="3" data-quarto-table-cell-role="th" data-valign="top">pl</td>
+<td data-quarto-table-cell-role="th">negative</td>
+<td>77422</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">neutral</td>
+<td>62074</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">positive</td>
+<td>97192</td>
+</tr>
+<tr class="even">
+<td rowspan="3" data-quarto-table-cell-role="th" data-valign="top">pt</td>
+<td data-quarto-table-cell-role="th">negative</td>
+<td>56827</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">neutral</td>
+<td>55165</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">positive</td>
+<td>45842</td>
+</tr>
+<tr class="odd">
+<td rowspan="3" data-quarto-table-cell-role="th" data-valign="top">ru</td>
+<td data-quarto-table-cell-role="th">negative</td>
+<td>31770</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">neutral</td>
+<td>48106</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">positive</td>
+<td>31054</td>
+</tr>
+<tr class="even">
+<td rowspan="3" data-quarto-table-cell-role="th" data-valign="top">sk</td>
+<td data-quarto-table-cell-role="th">negative</td>
+<td>14431</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">neutral</td>
+<td>12842</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">positive</td>
+<td>29350</td>
+</tr>
+<tr class="odd">
+<td rowspan="3" data-quarto-table-cell-role="th" data-valign="top">sl</td>
+<td data-quarto-table-cell-role="th">negative</td>
+<td>33694</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">neutral</td>
+<td>50553</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">positive</td>
+<td>29296</td>
+</tr>
+<tr class="even">
+<td rowspan="3" data-quarto-table-cell-role="th" data-valign="top">sq</td>
+<td data-quarto-table-cell-role="th">negative</td>
+<td>6889</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">neutral</td>
+<td>14757</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">positive</td>
+<td>22638</td>
+</tr>
+<tr class="odd">
+<td rowspan="3" data-quarto-table-cell-role="th" data-valign="top">sr</td>
+<td data-quarto-table-cell-role="th">negative</td>
+<td>25089</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">neutral</td>
+<td>32283</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">positive</td>
+<td>18996</td>
+</tr>
+<tr class="even">
+<td rowspan="3" data-quarto-table-cell-role="th" data-valign="top">sv</td>
+<td data-quarto-table-cell-role="th">negative</td>
+<td>16266</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">neutral</td>
+<td>13342</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">positive</td>
+<td>11738</td>
+</tr>
+<tr class="odd">
+<td rowspan="3" data-quarto-table-cell-role="th" data-valign="top">th</td>
+<td data-quarto-table-cell-role="th">negative</td>
+<td>9326</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">neutral</td>
+<td>28616</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">positive</td>
+<td>34377</td>
+</tr>
+<tr class="even">
+<td rowspan="3" data-quarto-table-cell-role="th" data-valign="top">ur</td>
+<td data-quarto-table-cell-role="th">negative</td>
+<td>5239</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">neutral</td>
+<td>8585</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">positive</td>
+<td>5836</td>
+</tr>
+<tr class="odd">
+<td rowspan="3" data-quarto-table-cell-role="th" data-valign="top">zh</td>
+<td data-quarto-table-cell-role="th">negative</td>
+<td>117967</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">neutral</td>
+<td>69016</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">positive</td>
+<td>144719</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="texts-in-language-family-and-genus" class="level3">
+<h3 class="anchored" data-anchor-id="texts-in-language-family-and-genus">Texts in Language Family and Genus</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(mms_dataset_df.groupby(by<span class="op">=</span>[<span class="st">'Family'</span>, <span class="st">'Genus'</span>,]).count()[<span class="st">"text"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">text</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">Family</th>
+<th data-quarto-table-cell-role="th">Genus</th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Afro-Asiatic</td>
+<td data-quarto-table-cell-role="th">Semitic</td>
+<td>940694</td>
+</tr>
+<tr class="even">
+<td rowspan="7" data-quarto-table-cell-role="th" data-valign="top">Indo-European</td>
+<td data-quarto-table-cell-role="th">Albanian</td>
+<td>44284</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Baltic</td>
+<td>5790</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Germanic</td>
+<td>2687719</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Indic</td>
+<td>36659</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Iranian</td>
+<td>13525</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Romance</td>
+<td>799242</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Slavic</td>
+<td>966366</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Japanese</td>
+<td data-quarto-table-cell-role="th">Japanese</td>
+<td>209780</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Sino-Tibetan</td>
+<td data-quarto-table-cell-role="th">Chinese</td>
+<td>331702</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Tai-Kadai</td>
+<td data-quarto-table-cell-role="th">Kam-Tai</td>
+<td>72319</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Uralic</td>
+<td data-quarto-table-cell-role="th">Ugric</td>
+<td>56682</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="examples-per-domain" class="level3">
+<h3 class="anchored" data-anchor-id="examples-per-domain">Examples per domain</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(mms_dataset_df.groupby(by<span class="op">=</span>[<span class="st">"domain"</span>]).count()[<span class="st">"text"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">text</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">domain</th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">chats</td>
+<td>16781</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">mixed</td>
+<td>94122</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">news</td>
+<td>26413</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">poems</td>
+<td>1052</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">reviews</td>
+<td>4510893</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">social_media</td>
+<td>1515501</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="hosting-licensing-and-maintenance-plan" class="level2">
+<h2 class="anchored" data-anchor-id="hosting-licensing-and-maintenance-plan">Hosting, Licensing, and Maintenance Plan</h2>
+<ul>
+<li><strong>Hosting</strong>: The datasets and benchmark will be hosted on a reliable and scalable cloud infrastructure to ensure accessibility and availability (HuggingFace Hub). The choice of hosting platform will be based on factors such as reliability, performance, and cost-effectiveness.</li>
+<li><strong>Licensing</strong>: We will clearly state the data license under which the datasets are released, ensuring that the terms of use are explicitly defined. We will consider licenses that facilitate research and allow for derivative works, while also addressing potential ethical considerations. See the license in repository.</li>
+<li><strong>Maintenance</strong>: We (see Dataset Curators section) are committed to providing ongoing maintenance and support for the datasets and benchmark. This includes regular updates, bug fixes, and addressing any user feedback or inquiries. We will also establish a communication channel for users to report issues or request assistance.</li>
+</ul>
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-northcutt2021confident" class="csl-entry" role="listitem">
+Northcutt, Curtis, Lu Jiang, and Isaac Chuang. 2021. <span>“Confident Learning: Estimating Uncertainty in Dataset Labels.”</span> <em>Journal of Artificial Intelligence Research</em> 70: 1373–1411.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
